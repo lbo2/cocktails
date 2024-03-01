@@ -35,7 +35,9 @@ app.listen(port, () => {
 });
 
 function connectDB() {
-    mongoose.connect('mongodb+srv://lbo2mail:OUvXOPYHDI1C1cRw@cluster0.c1lpqrw.mongodb.net/cocktails?retryWrites=true&w=majority');
+    const user = process.env.MONGODB_USER;
+    const pass = process.env.MONGODB_PASS;
+    mongoose.connect(`mongodb+srv://${user}:${pass}@cluster0.c1lpqrw.mongodb.net/cocktails?retryWrites=true&w=majority`);
     const db = mongoose.connection;
     db.on("error", console.error.bind(console, "connection failed: "));
     db.once("open", function () {
