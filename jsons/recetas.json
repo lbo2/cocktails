@@ -1,0 +1,894 @@
+{
+    "recetas": [
+        {
+            "id": 0,
+            "nombre": "Old Fashioned",
+            "ingredientes": [
+                {
+                    "id": 0,
+                    "cantidad": "2",
+                    "unidad": 1
+                },
+                {
+                    "id": 1,
+                    "cantidad": "1",
+                    "unidad": 4
+                },
+                {
+                    "id": 2,
+                    "cantidad": "4",
+                    "unidad": 2
+                },
+                {
+                    "id": 3,
+                    "cantidad": "1",
+                    "unidad": 10
+                },
+                {
+                    "id": 4,
+                    "cantidad": "1",
+                    "unidad": 6
+                }
+            ],
+            "instrucciones": "string",
+            "imagen": "https://recipes.net/wp-content/uploads/2023/05/old-fashioned-recipe_5580763c184bbbc06944febb738175ed-768x768.jpeg"
+        },
+        {
+            "id": 1,
+            "nombre": "Sazerac",
+            "ingredientes": [
+                {
+                    "id": 5,
+                    "cantidad": "2",
+                    "unidad": 1
+                },
+                {
+                    "id": 6,
+                    "cantidad": "4",
+                    "unidad": 2
+                },
+                {
+                    "id": 7,
+                    "cantidad": "1",
+                    "unidad": 3
+                },
+                {
+                    "id": 3,
+                    "cantidad": "1",
+                    "unidad": 2
+                },
+                {
+                    "id": 8,
+                    "cantidad": "1",
+                    "unidad": 2
+                },
+                {
+                    "id": 9,
+                    "cantidad": "1",
+                    "unidad": 7
+                }
+            ],
+            "instrucciones": "string",
+            "imagen": "https://barkeepernation.com/wp-content/uploads/2022/11/sazerac-cocktail.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Manhattan",
+            "ingredientes": [
+                {
+                    "id": 5,
+                    "cantidad": "2",
+                    "unidad": 1
+                },
+                {
+                    "id": 10,
+                    "cantidad": "1",
+                    "unidad": 1
+                },
+                {
+                    "id": 2,
+                    "cantidad": "4",
+                    "unidad": 2
+                }
+            ],
+            "instrucciones": "Mezclar el whisky de centeno, el vermut dulce y las gotas de Angostura en un vaso con hielo. Remover bien y colar en una copa de cóctel fría. Decorar con una cereza al marrasquino.",
+            "imagen": "https://www.pamperedchef.com/iceberg/com/recipe/1445550-lg.jpg"
+        },
+        {
+            "nombre": "Piña colada",
+            "ingredientes": [
+                {
+                    "id": 11,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 12,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 13,
+                    "cantidad": "90",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Poner todos los ingredientes en una licuadora y triturar hasta obtener una textura suave. Servir en un vaso de tubo con una rodaja de piña",
+            "imagen": "https://www.gourmet.cl/wp-content/uploads/2016/09/Pi%C3%B1a_Colada-web-553x458.jpg",
+            "id": 3
+        },
+        {
+            "nombre": "Daiquiri de fresa",
+            "ingredientes": [
+                {
+                    "id": 11,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 17,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 18,
+                    "cantidad": "6",
+                    "unidad": 11
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Poner las fresas en una coctelera y machacarlas ligeramente. Añadir el ron, el zumo de limón, el almíbar y el hielo. Agitar bien y colar en una copa de cóctel. Decorar con una fresa fresca.",
+            "imagen": "https://cdn2.cocinadelirante.com/sites/default/files/images/2019/03/daiquiri-sin-alcohol.jpg",
+            "id": 4
+        },
+        {
+            "nombre": "Margarita",
+            "ingredientes": [
+                {
+                    "id": 19,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 20,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 21,
+                    "cantidad": "",
+                    "unidad": 10
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Frotar el borde de una copa de cóctel con un gajo de limón y cubrirlo con sal. Poner el tequila, el Cointreau, el zumo de limón y el hielo en una coctelera. Agitar bien y colar en la copa de cóctel. Decorar con una rodaja de limón.",
+            "imagen": "https://www.gourmet.cl/wp-content/uploads/2011/10/Margarita-e1319802606185.jpg",
+            "id": 5
+        },
+        {
+            "nombre": "Mojito",
+            "ingredientes": [
+                {
+                    "id": 19,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 22,
+                    "cantidad": "1/2",
+                    "unidad": 11
+                },
+                {
+                    "id": 23,
+                    "cantidad": "12",
+                    "unidad": 12
+                },
+                {
+                    "id": 7,
+                    "cantidad": "2",
+                    "unidad": 13
+                },
+                {
+                    "id": 24,
+                    "cantidad": "",
+                    "unidad": 14
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Poner las hojas de hierbabuena y el azúcar en un vaso y machacarlas ligeramente. Añadir el zumo de lima y el hielo. Verter el ron blanco y rellenar con agua con gas. Decorar con una ramita de hierbabuena.",
+            "imagen": "https://laroussecocina.mx/wp-content/uploads/2020/07/Mojito.jpg",
+            "id": 6
+        },
+        {
+            "nombre": "Negroni",
+            "ingredientes": [
+                {
+                    "id": 25,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 26,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 27,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 28,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezclar la ginebra, el Campari y el vermut dulce en un vaso con hielo. Remover bien y colar en una copa de cóctel fría. Decorar con una cáscara de naranja.",
+            "imagen": "https://www.gourmet.cl/wp-content/uploads/2019/03/Negroni-web-553x458.jpg",
+            "id": 8
+        },
+        {
+            "nombre": "Tequila Sunrise",
+            "ingredientes": [
+                {
+                    "id": 19,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 29,
+                    "cantidad": "120",
+                    "unidad": 0
+                },
+                {
+                    "id": 30,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 4,
+                    "cantidad": "",
+                    "unidad": 14
+                }
+            ],
+            "instrucciones": "Llena un vaso con hielo. Vierte el tequila y el jugo de naranja. Agrega lentamente la granadina para crear el efecto de amanecer. Decora con una rodaja de naranja.",
+            "imagen": "https://laroussecocina.mx/wp-content/uploads/2020/08/shutterstock-1120600229.jpg",
+            "id": 9
+        },
+        {
+            "nombre": "Cosmopolitan",
+            "ingredientes": [
+                {
+                    "id": 31,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 20,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 34,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 22,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 35,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezclar el vodka, el Cointreau, el jugo de arándano, el jugo de lima y el hielo en una coctelera. Agitar bien y colar en una copa de cóctel fría. Decorar con una cáscara de lima.",
+            "imagen": "https://i.blogs.es/43e44b/cosmopolitan/450_1000.jpeg",
+            "id": 11
+        },
+        {
+            "nombre": "Tom Collins",
+            "ingredientes": [
+                {
+                    "id": 25,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 36,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 3,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 37,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 38,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezclar la ginebra, el jugo de limón, el jarabe simple y el hielo en un vaso. Llenar con soda y decorar con una cereza al marrasquino y una rodaja de naranja.",
+            "imagen": "https://www.gourmet.cl/wp-content/uploads/2019/10/Tom-Collins-570x458.jpg",
+            "id": 12
+        },
+        {
+            "nombre": "White Russian",
+            "ingredientes": [
+                {
+                    "id": 31,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 39,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 40,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Mezclar el vodka, el licor de café y la crema de leche en un vaso con hielo. Remover bien y servir.",
+            "imagen": "https://www.liquor.com/thmb/wzgqg2FC1Sqbwo_PAJofVVZIMRk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__12__20073201__white-russian-720x720-article-cbe4b9a832c64f8da0bb09407caefa7f.jpg",
+            "id": 13
+        },
+        {
+            "nombre": "Piña Colada sin Alcohol",
+            "ingredientes": [
+                {
+                    "id": 41,
+                    "cantidad": "120",
+                    "unidad": 0
+                },
+                {
+                    "id": 42,
+                    "cantidad": "120",
+                    "unidad": 0
+                },
+                {
+                    "id": 43,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Mezclar la leche de coco, el jugo de piña, la crema de coco y el hielo en una licuadora. Licuar hasta obtener una textura suave. Servir en un vaso alto.",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdW8G0cMx-FqDsiBIm-qQ4ee--iapaESSg6A&usqp=CAU",
+            "id": 14
+        },
+        {
+            "nombre": "Margarita de Mango",
+            "ingredientes": [
+                {
+                    "id": 19,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 44,
+                    "cantidad": "60",
+                    "unidad": 0
+                },
+                {
+                    "id": 22,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 21,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Escarchar el borde de una copa con sal. Mezclar el tequila, el puré de mango, el jugo de lima y el hielo en una coctelera. Agitar bien y colar en la copa. Decorar con una rodaja de mango.",
+            "imagen": "https://cdn.cocineroaficionado.com/wp-content/uploads/2020/12/margarita-mango.jpg",
+            "id": 15
+        },
+        {
+            "nombre": "Sangría",
+            "ingredientes": [
+                {
+                    "id": 45,
+                    "cantidad": "750",
+                    "unidad": 0
+                },
+                {
+                    "id": 29,
+                    "cantidad": "250",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "100",
+                    "unidad": 0
+                },
+                {
+                    "id": 46,
+                    "cantidad": "100",
+                    "unidad": 0
+                },
+                {
+                    "id": 47,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 7,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezcla el vino tinto, el jugo de naranja, el jugo de limón, el brandy y el azúcar en una jarra grande. Agrega las frutas frescas y deja reposar en la nevera durante al menos 2 horas. Sirve en vasos con hielo.",
+            "imagen": "https://images.hola.com/imagenes/cocina/recetas/20200514167988/receta-sangria-clasica/0-823-899/sangria-t.jpg",
+            "id": 16
+        },
+        {
+            "nombre": "Tequila Sunrise sin Alcohol",
+            "ingredientes": [
+                {
+                    "id": 29,
+                    "cantidad": "120",
+                    "unidad": 0
+                },
+                {
+                    "id": 30,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 4,
+                    "cantidad": "",
+                    "unidad": 14
+                }
+            ],
+            "instrucciones": "Llena un vaso con hielo. Vierte el jugo de naranja. Agrega lentamente la granadina para crear el efecto de amanecer. Decora con una rodaja de naranja.",
+            "imagen": "https://laroussecocina.mx/wp-content/uploads/2020/08/shutterstock-1120600229.jpg",
+            "id": 17
+        },
+        {
+            "nombre": "Mojito de Sandía",
+            "ingredientes": [
+                {
+                    "id": 49,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 50,
+                    "cantidad": "100",
+                    "unidad": 16
+                },
+                {
+                    "id": 22,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 51,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 7,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Machaca las hojas de menta con el azúcar en un vaso. Agrega la sandía troceada, el jugo de lima y el hielo. Vierte el ron blanco y rellena con agua con gas. Decora con una rodaja de sandía y una ramita de menta.",
+            "imagen": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/96E055AD-2D0D-4B29-B952-8437E0FFA000/Derivates/4b7f6bf4-67b2-4d3a-bd22-28fab06dbc40.jpg",
+            "id": 18
+        },
+        {
+            "nombre": "Michelada",
+            "ingredientes": [
+                {
+                    "id": 52,
+                    "cantidad": "350",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 53,
+                    "cantidad": "5",
+                    "unidad": 0
+                },
+                {
+                    "id": 54,
+                    "cantidad": "",
+                    "unidad": 17
+                },
+                {
+                    "id": 21,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                },
+                {
+                    "id": 55,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 56,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 57,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Escarcha el borde de un vaso con chile en polvo, cebolla en polvo y ajo en polvo. Mezcla el jugo de limón, la salsa Worcestershire, la salsa picante y el hielo en un vaso. Vierte la cerveza y decora con una rodaja de limón y una ramita de cilantro.",
+            "imagen": "https://cdn7.kiwilimon.com/brightcove/6390/640x640/6390.jpg",
+            "id": 19
+        },
+        {
+            "nombre": "Bellini de Durazno y Mango",
+            "ingredientes": [
+                {
+                    "id": 58,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 59,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 44,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Vierte el puré de durazno y el puré de mango en una copa de flauta. Llena con Prosecco. Decora con un durazno fresco y un trozo de mango.",
+            "imagen": "https://www.laylita.com/recetas/wp-content/uploads/2015/07/CC3B3ctel-Bellini-de-Durazno.jpg",
+            "id": 20
+        },
+        {
+            "nombre": "Kir Royale",
+            "ingredientes": [
+                {
+                    "id": 60,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 61,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Vierte la crema de Cassis en una copa de flauta. Llena con Champagne. Decora con una frambuesa.",
+            "imagen": "https://assets.wsimgs.com/wsimgs/rk/images/dp/recipe/202328/0002/img5l.jpg",
+            "id": 21
+        },
+        {
+            "nombre": "Espresso Martini",
+            "ingredientes": [
+                {
+                    "id": 31,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 62,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 36,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 63,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezcla el vodka, el café espresso, el jarabe simple y el hielo en una coctelera. Agitar bien y colar en una copa de martini fría. Decora con granos de café.",
+            "imagen": "https://images.absolutdrinks.com/drink-images/Raw/Absolut/814b4344-7244-4460-ac81-5c5be6fa3785.jpg?imwidth=500",
+            "id": 22
+        },
+        {
+            "nombre": "Shirley Temple",
+            "ingredientes": [
+                {
+                    "id": 64,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 30,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 37,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Llena un vaso con hielo. Vierte el ginger ale y la granadina. Decora con una cereza al marrasquino.",
+            "imagen": "https://kidfriendlythingstodo.com/wp-content/uploads/2022/05/DSC_0068-1.jpg-shirley-temple-sq-drink-feature.jpg",
+            "id": 23
+        },
+        {
+            "nombre": "Tequila Slammer",
+            "ingredientes": [
+                {
+                    "id": 19,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 65,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 21,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 66,
+                    "cantidad": "",
+                    "unidad": 14
+                }
+            ],
+            "instrucciones": "Escarcha el borde de un vaso con sal. Vierte el tequila en un vaso pequeño. Llena un vaso grande con hielo y el refresco de lima-limón. Coloca el vaso pequeño dentro del vaso grande y deja que se caiga. Decora con una rodaja de lima.",
+            "imagen": "https://cdn.shopify.com/s/files/1/0049/3486/0835/files/Tequila_Slammer_Recipe.png?v=1660515191",
+            "id": 24
+        },
+        {
+            "nombre": "French Martini",
+            "ingredientes": [
+                {
+                    "id": 31,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 67,
+                    "cantidad": "15",
+                    "unidad": 0
+                },
+                {
+                    "id": 42,
+                    "cantidad": "7.5",
+                    "unidad": 0
+                }
+            ],
+            "instrucciones": "Mezcla el vodka, el licor de Chambord y el jugo de piña en una coctelera con hielo. Agitar bien y colar en una copa de martini fría.",
+            "imagen": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/french-martini-03b9a1a.jpg?resize=768,574",
+            "id": 25
+        },
+        {
+            "nombre": "Black Russian",
+            "ingredientes": [
+                {
+                    "id": 31,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 39,
+                    "cantidad": "25",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Mezcla el vodka y el licor de café en un vaso con hielo. Remover bien y servir.",
+            "imagen": "https://barkeepernation.com/wp-content/uploads/2022/11/black-russian-cocktail.jpg",
+            "id": 26
+        },
+        {
+            "nombre": "Godfather",
+            "ingredientes": [
+                {
+                    "id": 68,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 69,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Mezcla el whisky escocés y el Amaretto en un vaso con hielo. Remover bien y servir.",
+            "imagen": "https://images.immediate.co.uk/production/volatile/sites/30/2021/11/Godfather-2370b01.jpg?quality=90&resize=556,505",
+            "id": 27
+        },
+        {
+            "nombre": "Irish Coffee",
+            "ingredientes": [
+                {
+                    "id": 70,
+                    "cantidad": "",
+                    "unidad": 13
+                },
+                {
+                    "id": 71,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 72,
+                    "cantidad": "",
+                    "unidad": 18
+                },
+                {
+                    "id": 73,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Calienta el café en una taza. Agrega el whisky irlandés y el azúcar moreno. Remueve hasta que el azúcar se disuelva. Cubre con crema de leche batida.",
+            "imagen": "https://images.absolutdrinks.com/drink-images/Raw/Absolut/dde5b617-048f-4af0-8c7f-0b2818407acb.jpg?imwidth=500",
+            "id": 28
+        },
+        {
+            "nombre": "Caipirinha",
+            "ingredientes": [
+                {
+                    "id": 74,
+                    "cantidad": "50",
+                    "unidad": 0
+                },
+                {
+                    "id": 66,
+                    "cantidad": "",
+                    "unidad": 19
+                },
+                {
+                    "id": 7,
+                    "cantidad": "",
+                    "unidad": 18
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                }
+            ],
+            "instrucciones": "Corta la lima en rodajas finas. Coloca las rodajas de lima y el azúcar en un vaso y machaca con un mortero. Agrega la cachaça y el hielo. Remueve bien y sirve.",
+            "imagen": "https://i.blogs.es/f02948/caipirinha-rec/840_560.jpg",
+            "id": 29
+        },
+        {
+            "nombre": "Pisco Sour",
+            "ingredientes": [
+                {
+                    "id": 75,
+                    "cantidad": "45",
+                    "unidad": 0
+                },
+                {
+                    "id": 16,
+                    "cantidad": "30",
+                    "unidad": 0
+                },
+                {
+                    "id": 36,
+                    "cantidad": "20",
+                    "unidad": 0
+                },
+                {
+                    "id": 1,
+                    "cantidad": "",
+                    "unidad": 3
+                },
+                {
+                    "id": 76,
+                    "cantidad": "",
+                    "unidad": 20
+                }
+            ],
+            "instrucciones": "Mezcla el pisco, el jugo de limón, el jarabe simple y el hielo en una coctelera. Agitar bien y colar en una copa de cóctel fría. Decora con gotas de amargo de Angostura.",
+            "imagen": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pisco-sour-44f6c3b.jpg?quality=90&resize=556,505",
+            "id": 30
+        },
+        {
+            "nombre": "Dry Martini",
+            "ingredientes": [
+                {
+                    "id": 77,
+                    "cantidad": "60",
+                    "unidad": 0
+                },
+                {
+                    "id": 78,
+                    "cantidad": "10",
+                    "unidad": 0
+                },
+                {
+                    "id": 79,
+                    "cantidad": "",
+                    "unidad": 13
+                }
+            ],
+            "instrucciones": "Mezcla la ginebra y el vermú seco en una coctelera con hielo. Agitar bien y colar en una copa de martini fría. Decora con una aceituna.",
+            "imagen": "https://cdn5.recetasdeescandalo.com/wp-content/uploads/2020/07/Martini-Dry-Martini-o-Martini-seco-un-coctel-exquisito-y-sencillo.jpg",
+            "id": 31
+        }
+    ]
+}

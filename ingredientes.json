@@ -1,0 +1,72 @@
+{
+    "ingredientes": [
+        {
+            "id": 0,
+            "nombre": "Whiskey",
+            "unidades": [
+                0,
+                1,
+                2
+            ],
+            "imagen": "url"
+        },
+        {
+            "id": 1,
+            "nombre": "Hielo",
+            "unidades": [
+                3,
+                4,
+                5
+            ],
+            "imagen": "url"
+        },
+        {
+            "id": 2,
+            "nombre": "Angostura Bitters",
+            "unidades": [
+                2
+            ],
+            "imagen": "url"
+        },
+        {
+            "id": 3,
+            "nombre": "Soda",
+            "unidades": [
+                0,
+                1,
+                2
+            ],
+            "imagen": "url"
+        },
+        {
+            "id": 4,
+            "nombre": "Naranja",
+            "unidades": [
+                0,
+                1,
+                2,
+                6,
+                7,
+                8,
+                9
+            ],
+            "imagen": "url"
+        },
+        {
+            "id": 5,
+            "nombre": "Rye Whiskey",
+            "unidades": [
+                1
+            ],
+            "imagen": ""
+        },
+        {
+            "id": 6,
+            "nombre": "Sweet Vermouth",
+            "unidades": [
+                1
+            ],
+            "imagen": ""
+        }
+    ]
+}

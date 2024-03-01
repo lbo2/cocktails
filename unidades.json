@@ -1,0 +1,48 @@
+{
+    "unidades": [
+        {
+            "id": 0,
+            "nombre": "ml"
+        },
+        {
+            "id": 1,
+            "nombre": "oz"
+        },
+        {
+            "id": 2,
+            "nombre": "dashes"
+        },
+        {
+            "id": 3,
+            "nombre": "cubos"
+        },
+        {
+            "id": 4,
+            "nombre": "roca"
+        },
+        {
+            "id": 5,
+            "nombre": "pepitas"
+        },
+        {
+            "id": 6,
+            "nombre": "cascara"
+        },
+        {
+            "id": 7,
+            "nombre": "twist"
+        },
+        {
+            "id": 8,
+            "nombre": "rueda"
+        },
+        {
+            "id": 9,
+            "nombre": "wedges"
+        },
+        {
+            "id": 10,
+            "nombre": "pizca"
+        }
+    ]
+}
