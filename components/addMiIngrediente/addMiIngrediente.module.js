@@ -1,8 +1,5 @@
-const fs = require('fs-extra')
-const recetas = require('../../jsons/recetas.json');
-const ingredientes = require('../../jsons/ingredientes.json');
-const misIngredientes = require('../../jsons/misIngredientes.json');
-const unidades = require('../../jsons/unidades.json');
+const MiIngrediente = require("../../schemas/misIngredientes.schema")
+const Ingrediente = require("../../schemas/ingredientes.schema")
 
 async function addMiIngrediente(req, res) {
     console.log("🚀 ~ addMiIngrediente ~ addMiIngrediente:")
@@ -10,23 +7,13 @@ async function addMiIngrediente(req, res) {
         console.log(req.body);
         const ingrediente = req.body;
         console.log("🚀 ~ addMiIngrediente ~ ingrediente:", ingrediente)
-        let index;
-        let encontrado;
         if(ingrediente.id == undefined) {
-            index = await addIngrediente(ingrediente);
-            encontrado = {
-                id: index,
-                nombre: ingrediente.nombre,
-                unidades: ingrediente.unidad != undefined ? [ingrediente.unidad] : [],
-                imagen: ingrediente.imagen
-            }
-        } else {
-            encontrado = ingredientes.ingredientes.find(({ id }) => id === ingrediente.id);
+            await addIngrediente(ingrediente);
         }
-        console.log("🚀 ~ addMiIngrediente ~ encontrado:", encontrado)
-        misIngredientes.misIngredientes.push(encontrado.id)
-        await fs.writeFile("./jsons/misIngredientes.json", JSON.stringify(misIngredientes));
-        return res.status(200).json(misIngredientes.misIngredientes);
+        const miIng = new MiIngrediente({ idIngrediente: ingrediente.id });
+        await miIng.save();
+        const misIngs = await MiIngrediente.find().populate("idIngrediente");
+        return res.status(200).json(misIngs);
     } catch (error) {
         console.log("🚀 ~ addMiIngrediente ~ error:", error)
         return res.status(500).json(error);
@@ -34,21 +21,8 @@ async function addMiIngrediente(req, res) {
 };
 
 async function addIngrediente(ingrediente) {
-    let index;
-    if(ingredientes.ingredientes.length == 0) {
-        index = 0;
-    } else {
-        const lastItem = ingredientes.ingredientes[ingredientes.ingredientes.length-1]
-        index = lastItem.id + 1;
-    }
-    ingredientes.ingredientes.push({
-        "id": index,
-        "nombre": ingrediente.nombre,
-        "unidades": ingrediente.unidad != undefined ? [unidades.unidades.find(({ nombre }) => nombre === ingrediente.unidad).id] : [],
-        "imagen": ""
-    })
-    await fs.writeFile("./jsons/ingredientes.json", JSON.stringify(ingredientes));
-    return index;
+    let newIngrediente = new Ingrediente({ nombre: ingrediente.nombre, imagen: ingrediente.imagen});
+    await newIngrediente.save();
 }
 
 module.exports = addMiIngrediente;

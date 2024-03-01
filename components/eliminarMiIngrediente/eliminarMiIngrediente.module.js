@@ -1,25 +1,19 @@
-const fs = require('fs-extra')
-const recetas = require('../../jsons/recetas.json');
-const ingredientes = require('../../jsons/ingredientes.json');
-const misIngredientes = require('../../jsons/misIngredientes.json');
-const unidades = require('../../jsons/unidades.json');
+const MiIngrediente = require("../../schemas/misIngredientes.schema")
 
 async function eliminarMiIngrediente(req, res) {
     console.log("🚀 ~ eliminarMiIngrediente ~ eliminarMiIngrediente:")
     try {
         const ingrediente = req.body.id;
-        let indexEliminar;
-        for (let i = 0; i < misIngredientes.misIngredientes.length; i++) {
-            if(misIngredientes.misIngredientes[i] == ingrediente) {
-                indexEliminar = i;
+        console.log("🚀 ~ eliminarMiIngrediente ~ ingrediente:", ingrediente)
+        const misIngs = await MiIngrediente.find().populate("idIngrediente");
+
+        for (let i = 0; i < misIngs.length; i++) {
+            if(misIngs[i].idIngrediente._id == ingrediente) {
+                await MiIngrediente.deleteOne({ _id: misIngs[i]._id });
                 break;
             }
         }
-        if(indexEliminar != undefined) {
-            misIngredientes.misIngredientes.splice(indexEliminar, 1);
-        }
-        await fs.writeFile("./jsons/misIngredientes.json", JSON.stringify(misIngredientes));
-        return res.status(200).json(misIngredientes.misIngredientes);
+        return res.status(200).json(misIngs);
     } catch (error) {
         console.log("🚀 ~ eliminarMiIngrediente ~ error:", error)
         return res.status(500).json(error);

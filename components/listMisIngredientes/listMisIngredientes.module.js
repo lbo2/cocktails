@@ -23,7 +23,7 @@ async function listMisIngredientes(req, res) {
         //     await ingrediente.save();
         // });
 
-        const misIngs = await MiIngrediente.find().populate("idIngrediente");
+        const misIngs = await MiIngrediente.find({}, { "_id": false, "__v": false }).populate("idIngrediente");
         console.log("🚀 ~ listMisIngredientes ~ misIngs:", misIngs)
         return res.status(200).json(misIngs);
     } catch (error) {

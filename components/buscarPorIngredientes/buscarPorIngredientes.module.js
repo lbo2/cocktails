@@ -2,12 +2,13 @@ const recetas = require('../../jsons/recetas.json');
 const ingredientes = require('../../jsons/ingredientes.json');
 const unidades = require('../../jsons/unidades.json');
 
+const Receta = require("../../schemas/recetas.schema");
+
 async function buscarPorIngredientes(req, res) {
     console.log("🚀 ~ buscarPorIngredientes ~ buscarPorIngredientes:")
     console.log("🚀 ~ buscarPorIngredientes ~ req.body:", req.body)
     try {
-        let result;
-        const ingredientesRecetas = getIngredientesRecetas(req.body.ingredientes);
+        const ingredientesRecetas = await getIngredientesRecetas(req.body.ingredientes);
         console.log("🚀 ~ buscarPorIngredientes ~ ingredientesRecetas:", ingredientesRecetas)
         // const adentro = estaDentro(ingredientesRecetas, req.body.ingredientes)
         // console.log("🚀 ~ buscarPorIngredientes ~ adentro:", adentro)
@@ -18,17 +19,18 @@ async function buscarPorIngredientes(req, res) {
     }
 };
 
-function getIngredientesRecetas(ingredientesInput) {
+async function getIngredientesRecetas(ingredientesInput) {
   try {
     console.log("🚀 ~ getIngredientesRecetas ~ ingredientesInput:", ingredientesInput)
     let listRecetas = [];
-    recetas.recetas.forEach(receta => {
+    const recetasDB = await Receta.find().populate("ingredientes.id");
+
+    recetasDB.forEach(receta => {
         console.log("🚀 ~ getIngredientesRecetas ~ receta:", receta.nombre)
         let ingredientesTemp = [];
         receta.ingredientes.forEach(ingrediente => {
-            ingredientesTemp.push(ingrediente.id);
+          ingredientesTemp.push(ingrediente.id._id.toString());
         });
-        ingredientesTemp = ingredientesTemp;
         console.log("🚀 ~ getIngredientesRecetas ~ ingredientes:", ingredientesTemp)
         const adentro = estaDentro(ingredientesTemp, ingredientesInput)
         console.log("🚀 ~ getIngredientesRecetas ~ adentro:", adentro)
@@ -36,15 +38,15 @@ function getIngredientesRecetas(ingredientesInput) {
           let arrIngredientes = [];
           let ingredients = receta.ingredientes.map(ingrediente => {
               resultIngrediente = {
-                  "nombre": ingredientes.ingredientes.find(({ id }) => id === ingrediente.id).nombre,
+                  "nombre": ingrediente.id.nombre,
                   "cantidad": ingrediente.cantidad,
-                  "unidad": unidades.unidades.find(({ id }) => id === ingrediente.unidad).nombre
+                  "unidad": ingrediente.unidad,
               }
               return resultIngrediente
           })
           arrIngredientes.push(ingredients);
           const result = {
-              id: receta.id,
+              id: receta._id,
               nombre: receta.nombre,
               ingredientes: arrIngredientes,
               instrucciones: receta.instrucciones,
@@ -66,7 +68,9 @@ function getIngredientesRecetas(ingredientesInput) {
 function estaDentro(ingredientesReceta, arreglo) {
   if (arreglo.length >= ingredientesReceta.length) {
     let coincide = true;
+    console.log("🚀 ~ estaDentro ~ arreglo:", arreglo)
     for (let j = 0; j < ingredientesReceta.length; j++) {
+      console.log("🚀 ~ estaDentro ~ ingredientesReceta[j]:", ingredientesReceta[j])
       if (!arreglo.includes(ingredientesReceta[j])) {
         coincide = false;
         break;

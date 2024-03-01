@@ -3,88 +3,49 @@ const recetas = require('../../jsons/recetas.json');
 const ingredientes = require('../../jsons/ingredientes.json');
 const unidades = require('../../jsons/unidades.json');
 
+const Ingrediente = require("../../schemas/ingredientes.schema");
+const Receta = require("../../schemas/recetas.schema");
+
 async function addRecetaModule(req, res) {
     console.log("🚀 ~ addRecetaModule ~ addRecetaModule:")
     try {
         console.log(req.body);
         const receta = req.body;
+        const ingredientesDB = await Ingrediente.find();
         let arrIngredientes = [];
 
-        receta.ingredientes.map( ingrediente => {
-            const unidadId =  getIdUnidad(ingrediente.unidad);
-            const ingredienteId =  getIdIngrediente(ingrediente);
+        for(let ingrediente of receta.ingredientes) {
             arrIngredientes.push({
-                "id": ingredientes.ingredientes.find(({ nombre }) => nombre === ingrediente.nombre).id,
+                "id": await getIdIngrediente(ingrediente, ingredientesDB),
                 "cantidad": ingrediente.cantidad,
-                "unidad":unidades.unidades.find(({ nombre }) => nombre === ingrediente.unidad).id
+                "unidad": ingrediente.unidad,
             })
-        })
+        }
+
         receta.ingredientes = arrIngredientes;
-        receta.id = getLastIdRecetas();
-        console.log("🚀 ~ addRecetaModule ~ receta:", receta)
-        recetas.recetas.push(receta);
-        await fs.writeFile("./jsons/recetas.json", JSON.stringify(recetas));
-        return res.status(200).json(receta);
+        const newReceta = new Receta(receta);
+        await newReceta.save();
+        return res.status(200).json(newReceta);
     } catch (error) {
-        return res.status(500).json(error);
+        console.log("🚀 ~ addRecetaModule ~ error:", error)
+        return res.status(500).json(error.message);
     }
 };
 
-async function getIdUnidad(unidad) {
-    const encontrado = unidades.unidades.find(({ nombre }) => nombre === unidad);
-    id = encontrado != undefined ? encontrado.id : await addUnidad(unidad);
-    return id;
-}
-
-async function addUnidad(unidad) {
-    let index;
-    if(unidades.unidades.length == 0) {
-        index = 0;
+async function getIdIngrediente(ingrediente, listIngredientes) {
+    const encontrado = listIngredientes.find(({ nombre }) => nombre === ingrediente.nombre);
+    if(encontrado != undefined) {
+        id = encontrado._id;
     } else {
-        const lastItem = unidades.unidades[unidades.unidades.length-1]
-        index = lastItem.id + 1;
+        const nuevoIngrediente = await addIngrediente(ingrediente);
+        id = nuevoIngrediente._id;
     }
-    unidades.unidades.push({
-        "id": index,
-        "nombre": unidad,
-    })
-    await fs.writeFile("./jsons/unidades.json", JSON.stringify(unidades));
-    return index;
-}
-
-async function getIdIngrediente(ingrediente) {
-    const encontrado = ingredientes.ingredientes.find(({ nombre }) => nombre === ingrediente.nombre);
-    id = encontrado != undefined ? encontrado.id : await addIngrediente(ingrediente);
     return id;
 }
 
 async function addIngrediente(ingrediente) {
-    let index;
-    if(ingredientes.ingredientes.length == 0) {
-        index = 0;
-    } else {
-        const lastItem = ingredientes.ingredientes[ingredientes.ingredientes.length-1]
-        index = lastItem.id + 1;
-    }
-    ingredientes.ingredientes.push({
-        "id": index,
-        "nombre": ingrediente.nombre,
-        "unidades": [unidades.unidades.find(({ nombre }) => nombre === ingrediente.unidad).id],
-        "imagen": ""
-    })
-    await fs.writeFile("./jsons/ingredientes.json", JSON.stringify(ingredientes));
-    return index;
-}
-
-function getLastIdRecetas() {
-    let index;
-    if(recetas.recetas.length == 0) {
-        index = 0;
-    } else {
-        const lastItem = recetas.recetas[recetas.recetas.length-1]
-        index = lastItem.id + 1;
-    }
-    return index;
+    let newIngrediente = new Ingrediente({ nombre: ingrediente.nombre, imagen: ""});
+    return await newIngrediente.save();
 }
 
 module.exports = addRecetaModule;
