@@ -7,13 +7,18 @@ async function eliminarMiIngrediente(req, res) {
         console.log("🚀 ~ eliminarMiIngrediente ~ ingrediente:", ingrediente)
         const misIngs = await MiIngrediente.find().populate("idIngrediente");
 
+        let newMisIngredientes = [];
         for (let i = 0; i < misIngs.length; i++) {
-            if(misIngs[i].idIngrediente._id == ingrediente) {
+            console.log("🚀 ~ eliminarMiIngrediente ~ misIngs[i]:", misIngs[i])
+            if(misIngs[i].idIngrediente && misIngs[i].idIngrediente._id == ingrediente) {
                 await MiIngrediente.deleteOne({ _id: misIngs[i]._id });
-                break;
+            } else {
+                if(misIngs[i].idIngrediente)
+                    newMisIngredientes.push(misIngs[i].idIngrediente);
             }
         }
-        return res.status(200).json(misIngs);
+
+        return res.status(200).json(newMisIngredientes);
     } catch (error) {
         console.log("🚀 ~ eliminarMiIngrediente ~ error:", error)
         return res.status(500).json(error);

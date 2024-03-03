@@ -13,7 +13,12 @@ async function addMiIngrediente(req, res) {
         const miIng = new MiIngrediente({ idIngrediente: ingrediente.id });
         await miIng.save();
         const misIngs = await MiIngrediente.find().populate("idIngrediente");
-        return res.status(200).json(misIngs);
+        let newMisIngredientes = [];
+        for(let ingrediente of misIngs) {
+            if(ingrediente.idIngrediente)
+                newMisIngredientes.push(ingrediente.idIngrediente);
+        }
+        return res.status(200).json(newMisIngredientes);
     } catch (error) {
         console.log("🚀 ~ addMiIngrediente ~ error:", error)
         return res.status(500).json(error);
